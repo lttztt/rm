@@ -2,7 +2,7 @@
   "name": "marryme",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lttztt.github.io/marryme/build",
+  "homepage": "https://lttztt.github.io/marryme",
   "dependencies": {
     "axios": "^0.19.2",
     "bricks.js": "^1.8.0",
