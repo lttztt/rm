@@ -4,6 +4,18 @@ import Axios from "axios";
 import Bricks from "bricks.js";
 import "./App.css";
 
+import img1 from './imgs/1.jpg'
+import img2 from './imgs/2.jpg'
+import img3 from './imgs/3.jpg'
+import img4 from './imgs/4.jpg'
+import img5 from './imgs/5.jpg'
+import img6 from './imgs/6.jpg'
+import img7 from './imgs/7.jpg'
+import img8 from './imgs/8.jpg'
+import img9 from './imgs/9.jpg'
+import img0 from './imgs/10.jpg'
+const imgs = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img0];
+
 function getData(limit = 50, offset) {
   return Axios.get("https://musicapi.leanapp.cn/comment/music", {
     params: {
@@ -98,7 +110,7 @@ function App() {
       <h1 className="title">- 需要人陪の网易云评论 -</h1>
       <span className="github-button">
         <iframe
-          src="https://ghbtns.com/github-btn.html?user=objtube&repo=NeteaseMusic-qingtian-comment&type=star&count=true&size=large"
+          src="https://ghbtns.com/github-btn.html?user=lttztt&repo=rm&type=star&count=true&size=large"
           frameBorder="0"
           scrolling="0"
           width="170"
@@ -114,7 +126,7 @@ function App() {
           frameborder="no"
           framespacing="0"
           allowfullscreen="true"
-          style={{ width: 800, height: 500 }}
+          style={{ width: 1000, height: 600 }}
         />
       </div>
 
@@ -135,7 +147,8 @@ function App() {
         {comments.map(({ user, content, commentId, time }) => (
           <CommentCard
             key={commentId}
-            avatarUrl={user.avatarUrl}
+            avatarUrl={imgs[parseInt(Math.random() * 10)]}
+            // avatarUrl={user.avatarUrl}
             nickname={user.nickname}
             content={content}
             time={time}
